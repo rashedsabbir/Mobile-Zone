@@ -60,3 +60,28 @@ const loadPhones = () => {
             }
         });
 };
+
+const displayPhones = (phones) => {
+
+    //showing only results in between 0 to 20
+    const firstTweentyPhones = phones.slice(0, 20);
+
+
+    firstTweentyPhones.forEach((phone) => {
+
+        const div = document.createElement('div');
+
+        div.innerHTML = `
+      <div class="card text-center border-0">
+        <img src="${phone.image}" class="card-img-top w-50 h-50 mx-auto pt-3">
+        <div class="card-body">
+          <h5 class="card-title">${phone.phone_name}</h5>
+          <h5 class="card-title">${phone.brand}</h5>
+          <a href="#"><button onclick="loadSinglePhone('${phone.slug}')"   class="btn btn-danger">See Details</button> </a>
+        </div>
+      </div>`;
+
+        phoneContainer.appendChild(div);
+    });
+};
+
