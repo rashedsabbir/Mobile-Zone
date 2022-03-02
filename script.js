@@ -10,6 +10,7 @@ const loadPhones = () => {
     const searchText = input.value;
     input.value = '';
 
+    ////Phone Search api url-
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
     fetch(url)
         .then((response) => response.json())
@@ -83,5 +84,15 @@ const displayPhones = (phones) => {
 
         phoneContainer.appendChild(div);
     });
+};
+
+//Load single phone data 
+const loadSinglePhone = (phoneId) => {
+
+    //Phone Detail api url
+    const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => displayPhoneDetails(data.data));
 };
 
