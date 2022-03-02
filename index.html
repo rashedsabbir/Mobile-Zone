@@ -10,10 +10,45 @@
 
     <link rel="stylesheet" href="/style.css" />
 
-    <title>Mobile Mela</title>
+    <title>Mobile Zone</title>
 </head>
 
 <body>
+    <section class="container">
+        <!------------ Title ------------>
+        <h1 class="text-center text-danger fw-bold mt-4">Mobile Zone</h1>
+
+        <!------------ Search Area ---------->
+        <div class="d-flex w-50 mx-auto">
+            <input id="search-box" class="form-control me-2" type="search" placeholder="Type Brand Name"
+                aria-label="Search" />
+            <button onclick="loadPhones()" class="btn btn-danger" type="submit">
+                Search
+            </button>
+        </div>
+
+        <!------------- Error Handling ----------->
+        <h4 id="error" class="text-center text-danger mt-3"></h4>
+        <h4 id="empty-search-box" class="text-center text-danger mt-3"></h4>
+
+
+        <!---------- Optional Spinner --------->
+        <div class="w-50 mx-auto">
+            <img id="spinner" src="/images/spinning-loading.gif" class="w-75" />
+        </div>
+
+
+        <!----------- Phone overview ------------>
+        <div id="phone-detail" class="w-75 mx-auto my-4"></div>
+
+
+        <!----------- Phone result ------------->
+        <div id="phone-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+
+        </div>
+    </section>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
