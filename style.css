@@ -1,7 +1,43 @@
 body{
     font-family: 'Inter', sans-serif;
 }
+
+
 #spinner {
     display: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #show-all {
+    display: none;
+  }
+  
+  @media (max-width: 992px) {
+    .phone-img {
+      max-width: 70%;
+      height: 50%;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+  }
+  
+  @media (min-width: 993px) and (max-width: 1199px) {
+    .phone-img {
+      max-width: 50%;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .phone-img {
+      max-width: 40%;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
   }
   

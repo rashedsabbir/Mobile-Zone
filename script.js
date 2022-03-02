@@ -1,5 +1,5 @@
-'use strict';
 
+///constracting variable names
 const phoneContainer = document.getElementById('phone-container');
 const phoneDetail = document.getElementById('phone-detail');
 const spinner = document.getElementById('spinner');
@@ -113,7 +113,7 @@ const displayPhoneDetails = (phone) => {
     //Showing single phone detailed specification
     div.innerHTML = `
     <div>
-       <img src="${phone.image}" class="card-img-top mx-auto pt-3 phone-image mb-3">
+       <img src="${phone.image}" class="card-img-top mx-auto pt-3 phone-img mb-3">
        <div>
           <h3 class="text-center text-danger">${phone.name}</h3>
           <h6 class="text-center ">Release Date: ${releaseDate}</h6>
@@ -137,11 +137,13 @@ const displayPhoneDetails = (phone) => {
           <div class="card-body">
           <p> ${phone?.mainFeatures?.sensors[0]},  
               ${phone?.mainFeatures?.sensors[1]},
-              ${phone?.mainFeatures?.sensors[2]} </p> 
+              ${phone?.mainFeatures?.sensors[2]} 
+              </p> 
           <p> ${phone?.mainFeatures?.sensors[3]},
               ${phone?.mainFeatures?.sensors[4]},  
               ${phone?.mainFeatures?.sensors[5]},
-              ${phone?.mainFeatures?.sensors[6]} </p>
+              ${phone?.mainFeatures?.sensors[6]} 
+              </p>
           </div>
           </div>
         
@@ -152,7 +154,7 @@ const displayPhoneDetails = (phone) => {
           <div class="card-body">
           <p> Bluetooth: ${phone?.others?.Bluetooth} </p> 
           <p> GPS: ${phone?.others?.GPS} </p>
-          <p> NFC: ${phone?.others?.NFC} </p>
+          <p> NFC support: ${phone?.others?.NFC} </p>
           <p> Radio: ${phone?.others?.Radio} </p>
           <p> USB: ${phone?.others?.USB} </p>
           <p> WLAN: ${phone?.others?.WLAN} </p>
